@@ -1,0 +1,104 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FEFBEA; /* Light blue-gray background */
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #1D263B; /* Royal blue */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+nav ul li a {
+    color: #1D263B; 
+}
+nav ul li a:hover {
+    background-color: #d3d3d3; /* Light gray on hover */
+    color: #1D263B; /* Royal blue */
+}
+main {
+    padding: 20px;
+}
+/* Section Styles */
+section {
+    margin-bottom: 20px;
+}
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th {
+    background-color: #1D263B; /* Navy blue */
+    color: #fff;
+}
+/* Button Styles */
+.btn {
+    background-color: #bbc3dd; /* Royal blue */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+/* Footer Styles */
+footer {
+    background-color: #1D263B; /* Royal blue */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+/* Horizontal alignment for section links */
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    justify-content: center;
+}
+nav ul li {
+    margin-right: 25px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 200px; /* Adjust as needed */
+}
+
+.select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 150px;
+    overflow-y: auto;
+    display: none;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.menu a:hover {
+    background-color: #f0f0f0;
+}
