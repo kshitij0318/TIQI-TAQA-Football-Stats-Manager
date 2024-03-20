@@ -5,301 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiqi Taqa - Football Stats Manager</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Tiqi Taqa - Football Stats Manager</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#home" onclick="showSection('home')">Home</a></li>
-            <li><a href="#teams" onclick="showSection('teams')">Teams</a></li>
-            <li><a href="#players" onclick="showSection('players')">Players</a></li>
-            <li><a href="#matches" onclick="showSection('matches')">Matches</a></li>
-            <li><a href="#statistics" onclick="showSection('statistics')">Statistics</a></li>
-            <!-- Add a new link for the "Fixture" section -->
-            <li><a href="#fixture" onclick="showSection('fixture')">Fixture</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section id="home">
-            <h2>Welcome to Tiqi Taqa</h2>
-            <p>This is a football stats manager website where you can manage teams, players, matches, and view statistics.</p>
-        </section>
-        <section id="teams">
-            <h2>Teams</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Club</th>
-                        <th>Stadium</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Arsenal</td>
-                        <td>Emirates Stadium</td>
-                    </tr>
-                    <tr>
-                        <td>Aston Villa</td>
-                        <td>Villa Park</td>
-                    </tr>
-                    <tr>
-                        <td>Barnsley</td>
-                        <td>Oakwell</td>
-                    </tr>
-                    <tr>
-                        <td>Birmingham City</td>
-                        <td>St. Andrew's Trillion Trophy Stadium</td>
-                    </tr>
-                    <tr>
-                        <td>Blackburn Rovers</td>
-                        <td>Ewood Park</td>
-                    </tr>
-                    <tr>
-                        <td>Blackpool</td>
-                        <td>Bloomfield Road</td>
-                    </tr>
-                    <tr>
-                        <td>Bolton Wanderers</td>
-                        <td>Toughsheet Community Stadium</td>
-                    </tr>
-                    <tr>
-                        <td>Bournemouth</td>
-                        <td>Vitality Stadium</td>
-                    </tr>
-                    <tr>
-                        <td>Bradford City</td>
-                        <td>Valley Parade</td>
-                    </tr>
-                    <tr>
-                        <td>Brentford</td>
-                        <td>Gtech Community Stadium</td>
-                    </tr>
-                    <tr>
-                        <td>Brighton & Hove Albion</td>
-                        <td>American Express Stadium</td>
-                    </tr>
-                    <tr>
-                        <td>Burnley</td>
-                        <td>Turf Moor</td>
-                    </tr>
-                    <tr>
-                        <td>Cardiff City</td>
-                        <td>Cardiff City Stadium</td>
-                    </tr>
-                    <tr>
-                        <td>Charlton Athletic</td>
-                        <td>The Valley</td>
-                    </tr>
-                    <tr>
-                        <td>Chelsea</td>
-                        <td>Stamford Bridge</td>
-                    </tr>
-                    <tr>
-                        <td>Coventry City</td>
-                        <td>Highfield Road</td>
-                    </tr>
-                    <tr>
-                        <td>Crystal Palace</td>
-                        <td>Selhurst Park</td>
-                    </tr>
-                    <tr>
-                        <td>Derby County</td>
-                        <td>Pride Park Stadium</td>
-                    </tr>
-                    <tr>
-                        <td>Everton</td>
-                        <td>Goodison Park</td>
-                    </tr>
-                    <tr>
-                        <td>Fulham</td>
-                        <td>Craven Cottage</td>
-                    </tr>
-                    <tr>
-                        <td>Huddersfield Town</td>
-                        <td>John Smith's Stadium</td>
-                    </tr>
-                    <tr>
-                        <td>Hull City</td>
-                        <td>KCOM Stadium</td>
-                    </tr>
-                    <tr>
-                        <td>Ipswich Town</td>
-                        <td>Portman Road</td>
-                    </tr>
-                    <tr>
-                        <td>Leeds United</td>
-                        <td>Elland Road</td>
-                    </tr>
-                    <tr>
-                        <td>Leicester City</td>
-                        <td>King Power Stadium</td>
-                    </tr>
-                    <tr>
-                        <td>Liverpool</td>
-                        <td>Anfield</td>
-                    </tr>
-                    <tr>
-                        <td>Luton Town</td>
-                        <td>Kenilworth Road</td>
-                    </tr>
-                    <tr>
-                        <td>Manchester City</td>
-                        <td>Etihad Stadium</td>
-                    </tr>
-                    <tr>
-                        <td>Manchester United</td>
-                        <td>Old Trafford</td>
-                    </tr>
-                    <tr>
-                        <td>Middlesbrough</td>
-                        <td>Riverside Stadium</td>
-                    </tr>
-                    <tr>
-                        <td>Newcastle United</td>
-                        <td>St. James' Park</td>
-                    </tr>
-                    <tr>
-                        <td>Norwich City</td>
-                        <td>Carrow Road</td>
-                    </tr>
-                    <tr>
-                        <td>Nottingham Forest</td>
-                        <td>The City Ground</td>
-                    </tr>
-                    <tr>
-                        <td>Oldham Athletic</td>
-                        <td>Boundary Park</td>
-                    </tr>
-                    <tr>
-                        <td>Portsmouth</td>
-                        <td>Fratton Park</td>
-                    </tr>
-                    <tr>
-                        <td>Queens Park Rangers</td>
-                        <td>MATRADE Loftus Road Stadium</td>
-                    </tr>
-                    <tr>
-                        <td>Reading</td>
-                        <td>Madejski Stadium</td>
-                    </tr>
-                    <tr>
-                        <td>Sheffield United</td>
-                        <td>Bramall Lane</td>
-                    </tr>
-                    <tr>
-                        <td>Sheffield Wednesday</td>
-                        <td>Hillsborough</td>
-                    </tr>
-                    <tr>
-                        <td>Southampton</td>
-                        <td>St. Mary's Stadium</td>
-                    </tr>
-                    <tr>
-                        <td>Stoke City</td>
-                        <td>Britannia Stadium</td>
-                    </tr>
-                    <tr>
-                        <td>Sunderland</td>
-                        <td>Stadium of Light</td>
-                    </tr>
-                    <tr>
-                        <td>Swansea City</td>
-                        <td>Liberty Stadium</td>
-                    </tr>
-                    <tr>
-                        <td>Swindon Town</td>
-                        <td>County Ground</td>
-                    </tr>
-                    <tr>
-                        <td>Tottenham Hotspur</td>
-                        <td>Tottenham Hotspur Stadium</td>
-                    </tr>
-                    <tr>
-                        <td>Watford</td>
-                        <td>Vicarage Road</td>
-                    </tr>
-                    <tr>
-                        <td>West Bromwich Albion</td>
-                        <td>The Hawthorns</td>
-                    </tr>
-                    <tr>
-                        <td>West Ham United</td>
-                        <td>London Stadium</td>
-                    </tr>
-                    <tr>
-                        <td>Wigan Athletic</td>
-                        <td>DW Stadium</td>
-                    </tr>
-                    <tr>
-                        <td>Wimbledon</td>
-                        <td>Selhurst Park</td>
-                    </tr>
-                    <tr>
-                        <td>Wolverhampton Wanderers</td>
-                        <td>Molineux Stadium</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <!-- Placeholder sections for Players, Matches, and Statistics -->
-        <section id="players" style="display: none;">
-            <h2>Players</h2>
-            <p>Manage football players here. Add new players, update player information, or remove players from your roster.</p>
-        </section>
-        <section id="matches" style="display: none;">
-            <h2>Matches</h2>
-            <p>Keep track of football matches. Record match details, including scores, dates, and opponents.</p>
-        </section>
-        <section id="statistics" style="display: none;">
-            <h2>Statistics</h2>
-            <p>View football statistics. Analyze team performance, player stats, and match results.</p>
-        </section>
-        <!-- Fxiture section from the provided code -->
-        <section id="fxiture" style="display: none;">
-            <div>
-                <button onclick="first()" class="btn firstbtn" id="firstbtn">
-                    First Team
-                </button>
-                <button onclick="pl12()" class="btn pl2btn" id="pl12btn">PL2</button>
-                <button onclick="u18()" class="btn u18btn" id="u18btn">U18</button>
-            </div>
-            <div id="first">
-                <!-- First team content -->
-            </div>
-            <div id="pl2">
-                <!-- PL2 content -->
-            </div>
-            <div id="u18">
-                <!-- U18 content -->
-            </div>
-            <div id="ad">
-                <!-- Ad content -->
-            </div>
-            <div id="show">
-                <!-- Show content -->
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Tiqi Taqa. All rights reserved.</p>
-    </footer>
-
+    <div id="header"></div>
     <script>
+        // Function to toggle the display of sections based on section IDs
         function showSection(sectionId) {
             // Hide all sections
-            var sections = document.querySelectorAll('main section');
-            sections.forEach(function(section) {
+            document.querySelectorAll('section').forEach(section => {
                 section.style.display = 'none';
             });
-
             // Show the selected section
-            var selectedSection = document.getElementById(sectionId);
-            if (selectedSection) {
-                selectedSection.style.display = 'block';
-            }
+            document.getElementById(sectionId).style.display = 'block';
         }
+        // By default, display the "Home" section
+        showSection('home');
+    </script>
+    <script>
+        $(function(){
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
     </script>
 </body>
 </html>
+    <body>
+        <main>
+            <section id="players" style="display: none;">
+                <h2>Players</h2>
+                <p>Manage football players here. Add new players, update player information, or remove players from your roster.</p>
+            </section>
+            <section id="matches" style="display: none;">
+                <h2>Matches</h2>
+                <p>Keep track of football matches. Record match details, including scores, dates, and opponents.</p>
+            </section>
+            <section id="statistics" style="display: none;">
+                <h2>Statistics</h2>
+                <p>View football statistics. Analyze team performance, player stats, and match results.</p>
+            </section>
+        </main>
+    </body>
+    </html>   
+<head>
