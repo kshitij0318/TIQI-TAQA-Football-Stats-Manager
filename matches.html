@@ -40,10 +40,13 @@
             width: 80px;
             height: 80px;
             margin-top: 10px;
+            display: none; /* Initially hide all team badges */
         }
-        .teamSelectionBox.selected {
-            border-color: #007bff;
-            background-color: #f0f8ff;
+        .teamSelectionBox.selected img {
+            display: block; /* Display the selected team badge */
+        }
+        .teamSelectionBox.selected:hover img {
+            display: block; /* Keep the selected team badge displayed even on hover */
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -64,11 +67,11 @@
     <div id="teamSelection">
         <div id="teamA" class="teamSelectionBox">
             <h3>Team A</h3>
-            <img src="TEAM BADGES\AFCBournemouth.png" alt="AFC Bournemouth">
+            <!-- Team A badges will be dynamically added here -->
         </div>
         <div id="teamB" class="teamSelectionBox">
             <h3>Team B</h3>
-            <img src="TEAM BADGES\AFCBournemouth.png" alt="AFC Bournemouth">
+            <!-- Team B badges will be dynamically added here -->
         </div>
     </div>
     <button id="confirmBtn" disabled>Confirm</button>
@@ -88,44 +91,33 @@
             });
 
             // Handle team selection and enable/disable confirm button
-            $(".teamSelectionBox").on("click", function() {
+            $(document).on("click", ".teamSelectionBox", function() {
+                var selectedTeam = $(this).find("img").attr("alt");
+                var boxId = $(this).attr("id");
+
+                // Check if the team is already selected in the other box
+                var otherBoxId = (boxId === "teamA") ? "teamB" : "teamA";
+                var otherTeam = $("#" + otherBoxId).find("img").attr("alt");
+
+                // If the selected team is the same as the team in the other box, return
+                if (selectedTeam === otherTeam) {
+                    return;
+                }
+
                 // Remove selected class from all boxes
                 $(".teamSelectionBox").removeClass("selected");
                 // Add selected class to the clicked box
                 $(this).addClass("selected");
-                var teamName = $(this).find("img").attr("alt");
-                var boxId = $(this).attr("id");
-                var otherBoxId = (boxId === "teamA") ? "teamB" : "teamA";
-                // Remove the selected team from the other box
-                $("#" + otherBoxId + " img[alt='" + teamName + "']").remove();
+
+                // Clone the selected team badge and append it to the other box
+                $("#" + otherBoxId).empty().append($(this).find("img").clone());
+
                 // Enable confirm button if both boxes have a team selected
                 if ($("#teamA img").length > 0 && $("#teamB img").length > 0) {
                     $("#confirmBtn").prop("disabled", false);
                 } else {
                     $("#confirmBtn").prop("disabled", true);
                 }
-            });
-
-            // Handle key events for team selection boxes
-            $(".teamSelectionBox").on("keydown", function(event) {
-                var keyCode = event.keyCode;
-                var selectedBox = $(".teamSelectionBox.selected");
-                var nextBox;
-                // Handle arrow key events
-                switch (keyCode) {
-                    case 37: // Left arrow key
-                        nextBox = selectedBox.prev(".teamSelectionBox");
-                        break;
-                    case 39: // Right arrow key
-                        nextBox = selectedBox.next(".teamSelectionBox");
-                        break;
-                    default:
-                        return; // Exit function if key pressed is not an arrow key
-                }
-                // Remove selected class from current box
-                selectedBox.removeClass("selected");
-                // Add selected class to the next box
-                nextBox.addClass("selected");
             });
 
             // Handle confirm button click
