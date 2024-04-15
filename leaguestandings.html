@@ -16,41 +16,69 @@
                 $("#footer").load("footer.html");
             });
         </script>
-        <li>
-            <div class="dropdown">
-                <div class="select">
-                    <span class="selected" onclick="toggleDropdown()">League Standings</span>
-                    <div class="caret"></div>
-                </div>
-                <ul class="menu" id="yearsDropdown">
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/95-96.csv')">95-96</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/96-97.csv')">96-97</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/97-98.csv')">97-98</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/98-99.csv')">98-99</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/99-00.csv')">99-00</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/00-01.csv')">00-01</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/01-02.csv')">01-02</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/02-03.csv')">02-03</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/03-04.csv')">03-04</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/04-05.csv')">04-05</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/05-06.csv')">05-06</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/06-07.csv')">06-07</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/07-08.csv')">07-08</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/08-09.csv')">08-09</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/09-10.csv')">09-10</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/10-11.csv')">10-11</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/11-12.csv')">11-12</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/12-13.csv')">12-13</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/13-14.csv')">13-14</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/14-15.csv')">14-15</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/15-16.csv')">15-16</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/16-17.csv')">16-17</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/17-18.csv')">17-18</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/18-19.csv')">18-19</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/19-20.csv')">19-20</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/20-21.csv')">20-21</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/21-22.csv')">21-22</a></li>
-                    <li><a href="#" onclick="displayCSV('League_Standings/League Standings/22-23.csv')">22-23</a></li>
+
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected" onclick="toggleDropdown()">League Standings</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu" id="yearsDropdown">
+                            <li><a href="#" onclick="displayHTML('templates/95-96.html')">95-96</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/96-97.html')">96-97</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/97-98.html')">97-98</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/98-99.html')">98-99</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/99-00.html')">99-00</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/00-01.html')">00-01</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/01-02.html')">01-02</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/02-03.html')">02-03</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/03-04.html')">03-04</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/04-05.html')">04-05</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/05-06.html')">05-06</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/06-07.html')">06-07</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/07-08.html')">07-08</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/09-10.html')">09-10</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/09-10.html')">09-10</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/10-11.html')">10-11</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/11-13.html')">11-12</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/12-13.html')">12-13</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/13-14.html')">13-14</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/14-15.html')">14-15</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/15-16.html')">15-16</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/16-17.html')">16-17</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/17-18.html')">17-18</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/18-19.html')">18-19</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/19-20.html')">19-20</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/20-21.html')">20-21</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/21-22.html')">21-22</a></li>
+                            <li><a href="#" onclick="displayHTML('templates/22-23.html')">22-23</a></li>
+                            
+                            <!-- Add more list items as needed -->
+                        </ul>
+                    </div>
+                
+                    <div id="contentDisplayArea"></div>
+                
+                    <script>
+                        function toggleDropdown() {
+                            var dropdown = document.getElementById('yearsDropdown');
+                            dropdown.classList.toggle('active');
+                        }
+                
+                        function displayHTML(filePath) {
+                            fetch(filePath)
+                                .then(response => response.text())
+                                .then(html => {
+                                    document.getElementById('contentDisplayArea').innerHTML = html;
+                                })
+                                .catch(error => {
+                                    console.error('Error loading the HTML file:', error);
+                                });
+                
+                            
+                            var dropdown = document.getElementById('yearsDropdown');
+                            dropdown.classList.add('active');
+                        }
+                    </script>
                 </ul>
             </div>
             <div id="csvTableContainer"></div>
@@ -75,6 +103,10 @@
                 const tableHtml = `<table>${tableRows}</table>`;
                 return tableHtml;
             }
+
+            function displayTable(htmlFilePath) {
+            document.getElementById("table-frame").src = htmlFilePath;
+        }
         </script>
         <script>
             function toggleDropdown() {
@@ -82,6 +114,22 @@
     dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
 }
         </script>
+
+        <script>
+            function displayHTML(filePath) {
+    fetch(filePath)
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('contentDisplayArea').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error loading the HTML file:', error);
+        });
+}
+
+        </script>
+
+
     </section>
     <div id="footer"></div>
 </body>
