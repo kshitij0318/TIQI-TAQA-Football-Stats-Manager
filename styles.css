@@ -26,14 +26,36 @@ section {
     margin-bottom: 20px;
 }
 /* Table Styles */
+/* Reset default table styles */
 table {
-    width: 100%;
     border-collapse: collapse;
-}
-th {
-    background-color: #1D263B; /* Navy blue */
+    width: 100%;
+  }
+  
+  /* Style table header */
+  th {
+    background-color: #333;
     color: #fff;
-}
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Style table data cells */
+  td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Highlight top positions */
+  tr:nth-child(-n+1) {
+    background-color: #67ed52; /* Yellow */
+  }
+
+  tr:nth-last-child(-n+3) {
+    background-color: #e0aba2; /* Tomato red, change as needed */
+  }
+  
 /* Button Styles */
 .btn {
     background-color: #bbc3dd; /* Royal blue */
