@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiqi Taqa</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
         /* General Styles */
         body {
             font-family: Arial, sans-serif;
@@ -150,6 +158,17 @@
         #navbar li a:hover {
             background-color: #111;
         }
+        .team-badges {
+            width: 100%;
+            overflow: hidden; /* Hides anything outside the boundary of the container */
+            position: relative;
+        }
+
+        .team-badges {
+            display: flex;
+            width: auto;
+            animation: scrollLogo 20s linear infinite; /* Adjust '20s' to control the speed */
+        }
 
         .team-badges img {
             width: 60px; /* Adjust based on your preference */
@@ -157,7 +176,20 @@
             padding: 20px; /* Spacing between logos */
         }
 
+        /* Keyframes to create horizontal scrolling effect */
+        @keyframes scrollLogo {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
 
+        /* Paste the provided CSS styles here */
+        .scroller {
+            max-width: 600px;
+        }
 
         .scroller__inner {
             padding-block: 1rem;
@@ -194,11 +226,11 @@
         }
 
         .scroller[data-speed="fast"] {
-            --_animation-duration: 10s;
+            --_animation-duration: 20s;
         }
 
         .scroller[data-speed="slow"] {
-            --_animation-duration: 10s;
+            --_animation-duration: 60s;
         }
 
         @keyframes scroll {
@@ -207,3 +239,110 @@
             }
         }
 
+        /* general styles */
+
+        :root {
+            --clr-neutral-100: hsl(0, 0%, 100%);
+            --clr-primary-100: hsl(205, 15%, 58%);
+            --clr-primary-400: hsl(215, 25%, 27%);
+            --clr-primary-800: hsl(217, 33%, 17%);
+            --clr-primary-900: hsl(218, 33%, 9%);
+        }
+
+        html {
+            color-scheme: dark;
+        }
+
+        body {
+            display: grid;
+            min-block-size: 100vh;
+            place-content: center;
+            font-family: system-ui;
+            font-size: 1.125rem;
+            background-color: var(--clr-primary-800);
+        }
+
+        .tag-list {
+            margin: 0;
+            padding-inline: 0;
+            list-style: none;
+        }
+
+        .tag-list li {
+            padding: 1rem;
+            background: var(--clr-primary-400);
+            border-radius: 0.5rem;
+            box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
+        }
+
+        /* for testing purposed to ensure the animation lined up correctly */
+        .test {
+            background: red !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tiqi Taqa - Football Stats Manager</h1>
+    </header>
+    <div class="container">
+        <h2 align="center">Clubs</h2>
+        <div class="team-badges scroller" data-animated="true">
+            <div class="scroller__inner">
+                <!-- Include all the badge images here -->
+                <a href="https://www.arsenal.com/"><img src="TEAM BADGES\ARSENAL.png" alt="Arsenal"></a>
+                <a href="https://www.avfc.co.uk/"><img src="TEAM BADGES\AstonVilla.png" alt="Aston Villa"></a>
+                <!-- Include all other badge images here -->
+                <!-- Repeat the badges to ensure smooth infinite animation -->
+                <!-- Paste the same set of badges again -->
+                <a href="https://www.arsenal.com/"><img src="TEAM BADGES\ARSENAL.png" alt="Arsenal"></a>
+                <a href="https://www.avfc.co.uk/"><img src="TEAM BADGES\AstonVilla.png" alt="Aston Villa"></a>
+                <!-- Repeat all other badge images again -->
+            </div>
+        </div>
+    </div>
+    <nav>
+        <div id="navbar">
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('teams')">Teams</a></li>
+                <li><a href="#" onclick="showSection('news')">News</a></li>
+                <li><a href="#" onclick="showSection('matches')">Matches</a></li>
+                <li><a href="#" onclick="showSection('leaguestandings')">League Standings</a></li>
+            </ul>
+        </div>
+    </nav>
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+    <script>
+        // Paste the provided JavaScript code here
+        const scrollers = document.querySelectorAll(".scroller");
+
+        // If a user hasn't opted in for recuded motion, then we add the animation
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            addAnimation();
+        }
+
+        function addAnimation() {
+            scrollers.forEach((scroller) => {
+                // add data-animated="true" to every `.scroller` on the page
+                scroller.setAttribute("data-animated", true);
+
+                // Make an array from the elements within `.scroller-inner`
+                const scrollerInner = scroller.querySelector(".scroller__inner");
+                const scrollerContent = Array.from(scrollerInner.children);
+
+                // For each item in the array, clone it
+                // add aria-hidden to it
+                // add it into the `.scroller-inner`
+                scrollerContent.forEach((item) => {
+                    const duplicatedItem = item.cloneNode(true);
+                    duplicatedItem.setAttribute("aria-hidden", true);
+                    scrollerInner.appendChild(duplicatedItem);
+                });
+            });
+        }
+    </script>
+</body>
+</html>

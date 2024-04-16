@@ -128,6 +128,17 @@
                 // Fetch and display CSV data for matches between teamA and teamB in selectedSeason
                 fetchMatchData(teamA, teamB, selectedSeason);
             });
+
+            // Handle arrow key functionality
+            $(document).keydown(function(e) {
+                if (e.keyCode == 37) { // left arrow
+                    // Display previous badge
+                    showPreviousBadge();
+                } else if (e.keyCode == 39) { // right arrow
+                    // Display next badge
+                    showNextBadge();
+                }
+            });
         });
 
         function fetchTeams(selectedSeason) {
@@ -168,15 +179,22 @@
             var teamsForSeason = teamsData[selectedSeason];
 
             // Populate teams in Team A and Team B
-            if (teamsForSeason && teamsForSeason.length >= 20) {
-                // Assuming you have an array of team badges/images, you can iterate over it
-                // and append images for each team in Team A and Team B
-                teamsForSeason.slice(0, 20).forEach(function(teamName) {
-                    var teamImage = $("<img>").attr("src", "TEAM BADGES/" + teamName.toUpperCase() + ".png").attr("alt", teamName);
-                    $("#teamA").append(teamImage.clone());
-                    $("#teamB").append(teamImage.clone());
-                });
-            }
+if (teamsForSeason && teamsForSeason.length >= 20) {
+    // Assuming you have an array of team names, iterate over it
+    // and append images for each team in Team A and Team B
+    teamsForSeason.slice(0, 20).forEach(function(teamName) {
+        // Construct the correct file path using the provided sample
+        var imagePath = "TEAM BADGES/" + teamName.replace(/\s+/g, '') + ".png";
+        
+        // Create an img element with the constructed file path and alt attribute
+        var teamImage = $("<img>").attr("src", imagePath).attr("alt", teamName);
+        
+        // Append the image to both Team A and Team B
+        $("#teamA").append(teamImage.clone());
+        $("#teamB").append(teamImage.clone());
+    });
+}
+
         }
 
         function fetchMatchData(teamA, teamB, selectedSeason) {
@@ -188,17 +206,12 @@
             dropdown.classList.toggle("show");
         }
 
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(event) {
-            if (!event.target.matches('#season')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                for (var i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
+        function showPreviousBadge() {
+            // Logic to display the previous badge
+        }
+
+        function showNextBadge() {
+            // Logic to display the next badge
         }
     </script>
 </body>
