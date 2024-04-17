@@ -156,16 +156,12 @@
             height: auto;
             padding: 20px; /* Spacing between logos */
         }
-
-
-
         .scroller__inner {
             padding-block: 1rem;
             display: flex;
             flex-wrap: wrap;
             gap: 0; /* No gap between badges */
         }
-
         .scroller[data-animated="true"] {
             overflow: hidden;
             -webkit-mask: linear-gradient(
@@ -181,7 +177,7 @@
         .scroller[data-animated="true"] .scroller__inner {
             width: max-content;
             flex-wrap: nowrap;
-            animation: scroll var(--_animation-duration, 40s)
+            animation: scroll var(--_animation-duration, 50s)
                 var(--_animation-direction, forwards) linear infinite;
         }
 
@@ -206,4 +202,57 @@
                 transform: translate(calc(-50% - 0.5rem));
             }
         }
+        #teamSelection {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .teamSelectionBox {
+            width: 200px;
+            height: 150px;
+            margin: 0 10px;
+            background-color: #f0f0f0;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .teamSelectionBox:hover {
+            background-color: #e0e0e0;
+        }
+        .teamSelectionBox h3 {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+        .teamSelectionBox img {
+            width: 80px;
+            height: 80px;
+            margin-top: 10px;
+            display: none; /* Initially hide all team badges */
+        }
+        .teamSelectionBox.selected img {
+            display: block; /* Display the selected team badge */
+        }
+        .teamSelectionBox.selected:hover img {
+            display: block; /* Keep the selected team badge displayed even on hover */
+        }
 
+
+
+
+
+        /* MATCHES.CSS */
+        /* styles.css */
+
+
+
+
+        

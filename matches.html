@@ -4,51 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiqi Taqa - Football Stats Manager</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        #teamSelection {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .teamSelectionBox {
-            width: 200px;
-            height: 150px;
-            margin: 0 10px;
-            background-color: #f0f0f0;
-            border: 2px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            position: relative;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .teamSelectionBox:hover {
-            background-color: #e0e0e0;
-        }
-        .teamSelectionBox h3 {
-            text-align: center;
-            margin-top: 10px;
-            font-size: 16px;
-            color: #333;
-        }
-        .teamSelectionBox img {
-            width: 80px;
-            height: 80px;
-            margin-top: 10px;
-            display: none; /* Initially hide all team badges */
-        }
-        .teamSelectionBox.selected img {
-            display: block; /* Display the selected team badge */
-        }
-        .teamSelectionBox.selected:hover img {
-            display: block; /* Keep the selected team badge displayed even on hover */
-        }
-    </style>
+    <link rel="stylesheet" href="matches.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
@@ -64,155 +20,14 @@
             </select>
         </div>
     </div>
-    <div id="teamSelection">
-        <div id="teamA" class="teamSelectionBox">
-            <h3>Team A</h3>
-            <!-- Team A badges will be dynamically added here -->
-        </div>
-        <div id="teamB" class="teamSelectionBox">
-            <h3>Team B</h3>
-            <!-- Team B badges will be dynamically added here -->
-        </div>
-    </div>
-    <button id="confirmBtn" disabled>Confirm</button>
+    
     <div id="footer"></div>
-
     <script>
         $(function(){
             // Load header and footer
             $("#header").load("header.html");
             $("#footer").load("footer.html");
-
-            // Fetch and display teams based on selected season
-            $("#season").change(function() {
-                var selectedSeason = $(this).val();
-                // Fetch teams for the selected season and populate Box A and Box B
-                fetchTeams(selectedSeason);
-            });
-
-            // Handle team selection and enable/disable confirm button
-            $(document).on("click", ".teamSelectionBox", function() {
-                var selectedTeam = $(this).find("img").attr("alt");
-                var boxId = $(this).attr("id");
-
-                // Check if the team is already selected in the other box
-                var otherBoxId = (boxId === "teamA") ? "teamB" : "teamA";
-                var otherTeam = $("#" + otherBoxId).find("img").attr("alt");
-
-                // If the selected team is the same as the team in the other box, return
-                if (selectedTeam === otherTeam) {
-                    return;
-                }
-
-                // Remove selected class from all boxes
-                $(".teamSelectionBox").removeClass("selected");
-                // Add selected class to the clicked box
-                $(this).addClass("selected");
-
-                // Clone the selected team badge and append it to the other box
-                $("#" + otherBoxId).empty().append($(this).find("img").clone());
-
-                // Enable confirm button if both boxes have a team selected
-                if ($("#teamA img").length > 0 && $("#teamB img").length > 0) {
-                    $("#confirmBtn").prop("disabled", false);
-                } else {
-                    $("#confirmBtn").prop("disabled", true);
-                }
-            });
-
-            // Handle confirm button click
-            $("#confirmBtn").click(function() {
-                var teamA = $("#teamA img").attr("alt");
-                var teamB = $("#teamB img").attr("alt");
-                var selectedSeason = $("#season").val();
-                // Fetch and display CSV data for matches between teamA and teamB in selectedSeason
-                fetchMatchData(teamA, teamB, selectedSeason);
-            });
-
-            // Handle arrow key functionality
-            $(document).keydown(function(e) {
-                if (e.keyCode == 37) { // left arrow
-                    // Display previous badge
-                    showPreviousBadge();
-                } else if (e.keyCode == 39) { // right arrow
-                    // Display next badge
-                    showNextBadge();
-                }
-            });
         });
-
-        function fetchTeams(selectedSeason) {
-            // Assuming teamsData is a JSON object containing data for each season
-            // Teams data should be structured like: { "95-96": ["Team 1", "Team 2", ...], "96-97": [...], ... }
-            // You need to replace teamsData with your actual data source
-            var teamsData = {
-                "95-96": [
-                    "BlackburnRovers",
-                    "Manchester United",
-                    "Newcastle United",
-                    "Liverpool",
-                    "Leeds United",
-                    "Tottenham Hotspur",
-                    "Aston Villa",
-                    "Arsenal",
-                    "Chelsea",
-                    "Wimbledon",
-                    "Sheffield Wednesday",
-                    "Everton",
-                    "West Ham United",
-                    "Coventry City",
-                    "Southampton",
-                    "Derby County",
-                    "Sunderland",
-                    "Ipswich Town",
-                    "Leicester City",
-                    "Nottingham Forest"
-                ],
-                // Add data for other seasons
-            };
-
-            // Clear the existing teams in Team A and Team B
-            $("#teamA").empty();
-            $("#teamB").empty();
-
-            // Fetch teams for the selected season from the data source
-            var teamsForSeason = teamsData[selectedSeason];
-
-            // Populate teams in Team A and Team B
-if (teamsForSeason && teamsForSeason.length >= 20) {
-    // Assuming you have an array of team names, iterate over it
-    // and append images for each team in Team A and Team B
-    teamsForSeason.slice(0, 20).forEach(function(teamName) {
-        // Construct the correct file path using the provided sample
-        var imagePath = "TEAM BADGES/" + teamName.replace(/\s+/g, '') + ".png";
-        
-        // Create an img element with the constructed file path and alt attribute
-        var teamImage = $("<img>").attr("src", imagePath).attr("alt", teamName);
-        
-        // Append the image to both Team A and Team B
-        $("#teamA").append(teamImage.clone());
-        $("#teamB").append(teamImage.clone());
-    });
-}
-
-        }
-
-        function fetchMatchData(teamA, teamB, selectedSeason) {
-            // Fetch and display CSV data for matches between teamA and teamB in selectedSeason
-        }
-
-        function toggleDropdown() {
-            var dropdown = document.getElementById("season");
-            dropdown.classList.toggle("show");
-        }
-
-        function showPreviousBadge() {
-            // Logic to display the previous badge
-        }
-
-        function showNextBadge() {
-            // Logic to display the next badge
-        }
     </script>
 </body>
 </html>
