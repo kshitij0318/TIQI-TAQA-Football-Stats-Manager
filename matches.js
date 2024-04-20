@@ -52,6 +52,31 @@ const logos1 = [
     'TEAM BADGES/AFCWimbledon.png',
     'TEAM BADGES/WolverhamptonWanderers.png'
 ];
+
+const logoImage1 = document.getElementById('logoImage1');
+const prevButton1 = document.getElementById('prevButton1');
+const nextButton1 = document.getElementById('nextButton1');
+const selectButton1 = document.getElementById('selectButton1');
+let currentLogoIndex1 = 0;
+let selectedLogo1 = '';
+
+logoImage1.src = logos1[currentLogoIndex1]; // Set initial logo
+
+prevButton1.addEventListener('click', function() {
+    currentLogoIndex1 = (currentLogoIndex1 - 1 + logos1.length) % logos1.length;
+    logoImage1.src = logos1[currentLogoIndex1];
+});
+
+nextButton1.addEventListener('click', function() {
+    currentLogoIndex1 = (currentLogoIndex1 + 1) % logos1.length;
+    logoImage1.src = logos1[currentLogoIndex1];
+});
+
+selectButton1.addEventListener('click', function() {
+    selectedLogo1 = logos1[currentLogoIndex1];
+    console.log('Selected Left Logo:', selectedLogo1);
+});
+
 const logos2 = [
     'TEAM BADGES/Arsenal.png',
     'TEAM BADGES/AstonVilla.png',
@@ -103,31 +128,11 @@ const logos2 = [
     'TEAM BADGES/WestHam.png',
     'TEAM BADGES/WiganAthletic.png',
     'TEAM BADGES/AFCWimbledon.png',
-    'TEAM BADGES/WolverhamptonWanderers.png',
+    'TEAM BADGES/WolverhamptonWanderers.png'
 ];
-const logoImage1 = document.getElementById('logoImage1');
-const prevButton1 = document.getElementById('prevButton1');
-const nextButton1 = document.getElementById('nextButton1');
-const selectButton1 = document.getElementById('selectButton1');
-let currentLogoIndex1 = 0;
-let selectedLogo1 = '';
 
-logoImage1.src = logos1[currentLogoIndex1]; // Set initial logo
 
-prevButton1.addEventListener('click', function() {
-    currentLogoIndex1 = (currentLogoIndex1 - 1 + logos1.length) % logos1.length;
-    logoImage1.src = logos1[currentLogoIndex1];
-});
 
-nextButton1.addEventListener('click', function() {
-    currentLogoIndex1 = (currentLogoIndex1 + 1) % logos1.length;
-    logoImage1.src = logos1[currentLogoIndex1];
-});
-
-selectButton1.addEventListener('click', function() {
-    selectedLogo1 = logos1[currentLogoIndex1];
-    console.log('Selected Left Logo:', selectedLogo1);
-});
 const logoImage2 = document.getElementById('logoImage2');
 const prevButton2 = document.getElementById('prevButton2');
 const nextButton2 = document.getElementById('nextButton2');
@@ -150,4 +155,19 @@ nextButton2.addEventListener('click', function() {
 selectButton2.addEventListener('click', function() {
     selectedLogo2 = logos2[currentLogoIndex2];
     console.log('Selected Right Logo:', selectedLogo2);
+});
+
+
+
+// matches.js
+function toggleDropdown() {
+    var seasonDropdown = document.getElementById("season");
+    var selectedYear = seasonDropdown.value;
+    console.log("Selected Year: " + selectedYear);
+    // You can do more with the selected year here
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    var seasonDropdown = document.getElementById("season");
+    seasonDropdown.addEventListener("change", toggleDropdown);
 });
