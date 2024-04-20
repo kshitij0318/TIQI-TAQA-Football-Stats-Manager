@@ -1,258 +1,228 @@
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #FEFBEA; /* Light blue-gray background */
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #1D263B; /* Royal blue */
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        nav ul li a {
-            color: #1D263B; 
-        }
-        nav ul li a:hover {
-            background-color: #d3d3d3; /* Light gray on hover */
-            color: #1D263B; /* Royal blue */
-        }
-        main {
-            padding: 20px;
-        }
-        /* Section Styles */
-        section {
-            margin-bottom: 20px;
-        }
-        /* Table Styles */
-        /* Reset default table styles */
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        
-        /* Style table header */
-        th {
-            background-color: #333;
-            color: #fff;
-            font-weight: bold;
-            padding: 10px;
-            text-align: center;
-        }
-        
-        /* Style table data cells */
-        td {
-            padding: 10px;
-            text-align: center;
-        }
-        
-        /* Highlight top positions */
-        tr:nth-child(-n+1) {
-            background-color: #67ed52; /* Yellow */
-        }
+  /* General Styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Light blue-gray background */
+    margin: 0;
+    padding: 0;
+    /* flex-direction: column; */
+}
 
-        tr:nth-last-child(-n+3) {
-            background-color: #e0aba2; /* Tomato red, change as needed */
-        }
-        
-        /* Button Styles */
-        .btn {
-            background-color: #bbc3dd; /* Royal blue */
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        /* Footer Styles */
-        footer {
-            background-color: #1D263B; /* Royal blue */
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-        }
-        /* Horizontal alignment for section links */
-        nav ul {
-            display: flex;
-            list-style-type: none;
-            padding: 0;
-            justify-content: center;
-        }
-        nav ul li {
-            margin-right: 25px;
-        }
-        .dropdown {
-            position: relative;
-            display: inline-block;
-            width: 200px; /* Adjust as needed */
-        }
+/* .container {
+    flex: 1;
+} */
 
-        .select {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px;
-            border: 1px solid #ccc;
-            cursor: pointer;
-        }
+header {
+    background: linear-gradient(to right, #6E178B, #30134F); /* Purple Gradient */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
 
-        .menu {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-top: none;
-            max-height: 150px;
-            overflow-y: auto;
-            display: none;
-        }
 
-        .menu li {
-            list-style: none;
-        }
+nav ul li a {
+    color: #1D263B; 
+}
+nav ul li a:hover {
+    background-color: #d3d3d3; /* Light gray on hover */
+    color: #1D263B; /* Royal blue */
+}
 
-        .menu a {
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            color: #333;
-        }
 
-        .menu a:hover {
-            background-color: #f0f0f0;
-        }
-        #navbar {
-            background-color: #333;
-        }
+main {
+    padding: 20px;
+}
 
-        #navbar ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
 
-        #navbar li {
-            float: left;
-        }
+/* Section Styles */
+section {
+    margin-bottom: 20px;
+}
 
-        #navbar li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
 
-        #navbar li a:hover {
-            background-color: #111;
-        }
+/* Table Styles */
+/* Reset default table styles */
 
-        .team-badges img {
-            width: 60px; /* Adjust based on your preference */
-            height: auto;
-            padding: 20px; /* Spacing between logos */
-        }
-        .scroller__inner {
-            padding-block: 1rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0; /* No gap between badges */
-        }
-        .scroller[data-animated="true"] {
-            overflow: hidden;
-            -webkit-mask: linear-gradient(
-                90deg,
-                transparent,
-                white 20%,
-                white 80%,
-                transparent
-            );
-            mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-        }
 
-        .scroller[data-animated="true"] .scroller__inner {
-            width: max-content;
-            flex-wrap: nowrap;
-            animation: scroll var(--_animation-duration, 50s)
-                var(--_animation-direction, forwards) linear infinite;
-        }
+/* Button Styles */
+.btn {
+    background-color: #3757be; /* Royal blue */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
 
-        .scroller[data-direction="right"] {
-            --_animation-direction: reverse;
-        }
 
-        .scroller[data-direction="left"] {
-            --_animation-direction: forwards;
-        }
+/* Footer Styles */
+footer {
+    background: linear-gradient(to right, #8455b0, #330e62); /* Light Purple Gradient */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    clear:both;
+    margin-top: 20px;
+}
 
-        .scroller[data-speed="fast"] {
-            --_animation-duration: 10s;
-        }
 
-        .scroller[data-speed="slow"] {
-            --_animation-duration: 10s;
-        }
+/* Horizontal alignment for section links */    
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    justify-content: center;
+}
+nav ul li {
+    margin-right: 25px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 200px; 
+}
 
-        @keyframes scroll {
-            to {
-                transform: translate(calc(-50% - 0.5rem));
-            }
-        }
-        #teamSelection {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .teamSelectionBox {
-            width: 200px;
-            height: 150px;
-            margin: 0 10px;
-            background-color: #f0f0f0;
-            border: 2px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            position: relative;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .teamSelectionBox:hover {
-            background-color: #e0e0e0;
-        }
-        .teamSelectionBox h3 {
-            text-align: center;
-            margin-top: 10px;
-            font-size: 16px;
-            color: #333;
-        }
-        .teamSelectionBox img {
-            width: 80px;
-            height: 80px;
-            margin-top: 10px;
-            display: none; /* Initially hide all team badges */
-        }
-        .teamSelectionBox.selected img {
-            display: block; /* Display the selected team badge */
-        }
-        .teamSelectionBox.selected:hover img {
-            display: block; /* Keep the selected team badge displayed even on hover */
-        }
+.select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 150px;
+    overflow-y: auto;
+    display: none;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.menu a:hover {
+    background-color: #f0f0f0;
+}
+#navbar {
+    background-color: #333;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#navbar li {
+    float: left;
+}
+
+#navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar li a:hover {
+    background-color: #111;
+}
+
+.team-badges img {
+    width: 60px; /* Adjust based on your preference */
+    height: auto;
+    padding: 20px; /* Spacing between logos */
+}
+
+
+/* Home page image gallery css */
+div.gallery {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 300px;
+    height: 100;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
 
 
 
 
 
-        /* MATCHES.CSS */
-        /* styles.css */
+.scroller__inner {
+    padding-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0; /* No gap between badges */
+}
 
+.scroller[data-animated="true"] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(
+        90deg,
+        transparent,
+        white 20%,
+        white 80%,
+        transparent
+    );
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
 
+.scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 40s)
+        var(--_animation-direction, forwards) linear infinite;
+}
 
+.scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+}
 
-        
+.scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+    --_animation-duration: 10s;
+}
+
+.scroller[data-speed="slow"] {
+    --_animation-duration: 10s;
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
