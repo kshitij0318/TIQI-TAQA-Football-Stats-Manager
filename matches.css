@@ -82,8 +82,9 @@ img {
 } 
  
 footer {
-    background-color: #1D263B;
+    background-color: #1D263B; 
     color: #fff;
     text-align: center;
     padding: 10px;
+    margin-top: 20px;
 } 
