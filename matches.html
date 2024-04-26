@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiqi Taqa - Football Stats Manager</title>
-    <link rel="stylesheet" href="matches.css">
+    <link rel="stylesheet" href="CSS/matches.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
@@ -12,7 +12,7 @@
     <div id="matches">
         <h2>Team Selection</h2>
         <div>
-            <label for="season" onclick="toggleDropdown()">Select Season:</label>
+            <label for="season">Select Season:</label>
             <select id="season">
                 <option value="95-96">1995-1996</option>
                 <option value="96-97">1996-1997</option>
@@ -20,6 +20,34 @@
             </select>
         </div>
     </div>
+
+    <div class="row">
+        <div class="logo-container">
+            <button id="prevButton1" class="side-button">&#x2190;</button> <!-- Left arrow -->
+            <div class="viewer">
+                <img id="logoImage1" src="TEAM BADGES/AFCBournemouth.png" alt="Football Club Logo">
+                <div class="controls">
+                    <button id="selectButton1">Select</button>
+                </div>
+            </div>
+            <button id="nextButton1" class="side-button">&#x2192;</button> <!-- Right arrow -->
+        </div>
+
+        <!-- Second logo selector -->
+        <div class="logo-container">
+            <button id="prevButton2" class="side-button">&#x2190;</button> <!-- Left arrow -->
+            <div class="viewer">
+                <img id="logoImage2" src="TEAM BADGES/AFCBournemouth.png" alt="Football Club Logo">
+                <div class="controls">
+                    <button id="selectButton2">Select</button>
+                </div>
+            </div>
+            <button id="nextButton2" class="side-button">&#x2192;</button> <!-- Right arrow -->
+        </div>
+    </div>
+
+    <script src="matches.js"></script>
+
     
     <div id="footer"></div>
     <script>

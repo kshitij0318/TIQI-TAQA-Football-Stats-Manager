@@ -5,11 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tiqi Taqa - Football Stats Manager</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="CSS/leaguestandings.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
 <body>
     <div id="header"></div>       
-        <h2>League Standings</h2>
+        <h2 align="center">League Standings</h2>
         <script>
             $(function(){
                 $("#header").load("header.html");
@@ -52,7 +53,6 @@
                             <li><a href="#" onclick="displayHTML('templates/21-22.html')">21-22</a></li>
                             <li><a href="#" onclick="displayHTML('templates/22-23.html')">22-23</a></li>
                             
-                            <!-- Add more list items as needed -->
                         </ul>
                     </div>
                 
@@ -126,7 +126,10 @@
             console.error('Error loading the HTML file:', error);
         });
 }
+
         </script>
+
+
     </section>
     <div id="footer"></div>
 </body>
