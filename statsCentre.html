@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All-Time Premier League Stats</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            text-align: center;
+        }
+        .container {
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .card {
+            width: calc(50% - 20px); /* Adjust the width as needed */
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            font-size: 16px;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+        }/* Style the navigation bar */
+        .navbar {
+        overflow: hidden;
+        background-color: #333;
+        }
+
+        /* Navigation link styles */
+        .nav-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        }
+
+        .nav-item {
+        float: left;
+        }
+
+        .nav-link {
+        display: block;
+        padding: 10px 20px;
+        color: white;
+        text-decoration: none;
+        }
+
+        /* Change background color on hover  */
+        .nav-link:hover {
+        background-color: #777;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="header">
+        <h1>Stats Centre</h1>
+    </div>
+    <nav class="navbar">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="#all-time-stats" onclick="toggleStats()">All-time Stats</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Records</a></li>
+        </ul>
+      </nav>
+    <div class="container" id="all-time-stats">
+        <div class="card">
+            <h2>Appearances</h2>
+            <table id="appearances">
+                <tr>
+                    <th>Rank</th>
+                    <th>Player</th>
+                    <th>Club</th>
+                    <th>Nationality</th>
+                    <th>Stat</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Gareth Barry</td>
+                    <td>-</td>
+                    <td>England</td>
+                    <td>653</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>James Milner</td>
+                    <td>Brighton & Hove Albion</td>
+                    <td>England</td>
+                    <td>634</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Ryan Giggs</td>
+                    <td>-</td>
+                    <td>Wales</td>
+                    <td>632</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Frank Lampard</td>
+                    <td>-</td>
+                    <td>England</td>
+                    <td>609</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>David James</td>
+                    <td>-</td>
+                    <td>England</td>
+                    <td>572</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>Gary Speed</td>
+                    <td>-</td>
+                    <td>Wales</td>
+                    <td>535</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>Emile Heskey</td>
+                    <td>-</td>
+                    <td>England</td>
+                    <td>516</td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td>Mark Schwarzer</td>
+                    <td>-</td>
+                    <td>Australia</td>
+                    <td>514</td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td>Jamie Carragher</td>
+                    <td>-</td>
+                    <td>England</td>
+                    <td>508</td>
+                </tr>
+                <tr>
+                    <td>10.</td>
+                    <td>Phil Neville</td>
+                    <td>-</td>
+                    <td>England</td>
+                    <td>505</td>
+                </tr>
+            </table>
+        </div>
+        
+
+        <div class="card">
+            <h2>Goals</h2>
+            <table id="goals">
+                <tr>
+                    <th>Rank</th>
+                    <th>Player</th>
+                    <th>Club</th>
+                    <th>Nationality</th>
+                    <th>Stat</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Alan Shearer</td>
+                    <td>-</td>
+                    <td>England</td>
+                    <td>260</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Harry Kane</td>
+                    <td>-</td>
+                    <td>England</td>
+                    <td>213</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Wayne Rooney</td>
+                    <td>-</td>
+                    <td>England</td>
+                    <td>208</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Andrew Cole</td>
+                    <td>-</td>
+                    <td>England</td>
+                    <td>187</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Sergio Agüero</td>
+                    <td>-</td>
+                    <td>Argentina</td>
+                    <td>184</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>Frank Lampard</td>
+                    <td>-</td>
+                    <td>England</td>
+                    <td>177</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>Thierry Henry</td>
+                    <td>-</td>
+                    <td>France</td>
+                    <td>175</td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td>Robbie Fowler</td>
+                    <td>-</td>
+                    <td>England</td>
+                    <td>163</td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td>Jermain Defoe</td>
+                    <td>-</td>
+                    <td>England</td>
+                    <td>162</td>
+                </tr>
+                <tr>
+                    <td>10.</td>
+                    <td>Mohamed Salah</td>
+                    <td>Liverpool</td>
+                    <td>Egypt</td>
+                    <td>156</td>
+                </tr>
+            </table>
+        </div>
+        
+
+        <div class="card">
+            <h2>Assists</h2>
+            <table id="assists">
+                <tr>
+                    <th>Rank</th>
+                    <th>Player</th>
+                    <th>Club</th>
+                    <th>Nationality</th>
+                    <th>Stat</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Ryan Giggs</td>
+                    <td>-</td>
+                    <td>Wales</td>
+                    <td>162</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Cesc Fàbregas</td>
+                    <td>-</td>
+                    <td>Spain</td>
+                    <td>111</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Kevin De Bruyne</td>
+                    <td>Manchester City</td>
+                    <td>Belgium</td>
+                    <td>110</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Wayne Rooney</td>
+                    <td>-</td>
+                    <td>England</td>
+                    <td>103</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Frank Lampard</td>
+                    <td>-</td>
+                    <td>England</td>
+                    <td>102</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>Dennis Bergkamp</td>
+                    <td>-</td>
+                    <td>Netherlands</td>
+                    <td>94</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>David Silva</td>
+                    <td>-</td>
+                    <td>Spain</td>
+                    <td>93</td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td>Steven Gerrard</td>
+                    <td>-</td>
+                    <td>England</td>
+                    <td>92</td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td>James Milner</td>
+                    <td>Brighton & Hove Albion</td>
+                    <td>England</td>
+                    <td>89</td>
+                </tr>
+                <tr>
+                    <td>10.</td>
+                    <td>David Beckham</td>
+                    <td>-</td>
+                    <td>England</td>
+                    <td>80</td>
+                </tr>
+            </table>
+        </div>
+        
+
+        <div class="card">
+            <h2>Clean Sheets</h2>
+            <table id="clean-sheets">
+                <tr>
+                    <th>Rank</th>
+                    <th>Player</th>
+                    <th>Club</th>
+                    <th>Nationality</th>
+                    <th>Stat</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Petr Cech</td>
+                    <td>-</td>
+                    <td>Czech Republic</td>
+                    <td>202</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>David James</td>
+                    <td>-</td>
+                    <td>England</td>
+                    <td>169</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Mark Schwarzer</td>
+                    <td>-</td>
+                    <td>Australia</td>
+                    <td>152</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>David de Gea</td>
+                    <td>-</td>
+                    <td>Spain</td>
+                    <td>147</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>David Seaman</td>
+                    <td>-</td>
+                    <td>England</td>
+                    <td>141</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>Nigel Martyn</td>
+                    <td>-</td>
+                    <td>England</td>
+                    <td>137</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>Pepe Reina</td>
+                    <td>-</td>
+                    <td>Spain</td>
+                    <td>136</td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td>Brad Friedel</td>
+                    <td>-</td>
+                    <td>United States</td>
+                    <td>132</td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td>Tim Howard</td>
+                    <td>-</td>
+                    <td>United States</td>
+                    <td>132</td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td>Edwin van der Sar</td>
+                    <td>-</td>
+                    <td>Netherlands</td>
+                    <td>132</td>
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+    
+    <div id="footer">
+        &copy; 2024 All-Time Premier League Stats
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            // Load header and footer
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+
+            // Function to show all tables
+            function showAllTables() {
+                // Fetch and display all data for each table
+                // For simplicity, I'm assuming you have a function called fetchAllData() to fetch all the data from your backend
+                fetchAllData();
+            }
+        });
+    </script>
+</body>
+</html>
