@@ -1,45 +1,51 @@
 # Project Title
 
-Brief description or overview of the project.
+Tiqi Taqa
 
 ## Table of Contents
 
 - [Introduction](#introduction)
 - [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
+- [Installation & Usage](#installation)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
-Provide a more detailed introduction to the project. Explain its purpose, goals, and any relevant background information.
+Imagine having a trusted source of information for your football journey, presenting Tiqi Taqa. It's not just a statistics manager, it's your personalized guide through the world of football. Whether you're new to the game or a seasoned fan, Tiqi Taqa's user-friendly interface welcomes you with open arms, offering insights into matches like never before. Dive into player stats, team dynamics,all time stats and other relevant staistics all in one place. And don't worry about missing out on the latest buzz. Tiqi Taqa keeps you updated, enriching your understanding and love for the sport. Tiqi Taqa is not just a tool, it's a game-changer, transforming how fans engage with the beautiful game.
 
 ## Features
 
-Outline the key features of the project, along with brief descriptions. You can list them here or refer to separate documentation for more details.
+- Display of team badges for easy identification
+- Display league standings for all completed seasons of the premier league
+- Display individual player and team all time statistics.
+- Display stats relevant to current season (Till 05-05-2024)
+- Linked team websites as well as an option to book match tickets for those teams.
+- Customizable animation for team badges scrolling
+- Responsive design for seamless usage on different devices upon deployment.
 
-## Installation
+## Installation & Usage
 
-Provide step-by-step instructions on how to install and set up the project locally. Include any prerequisites, dependencies, or environment setup required.
+To install and use the project locally, follow these steps:
 
-## Usage
-
-Explain how to use the project, including any command-line instructions, configuration options, or examples. Provide code snippets or screenshots if necessary.
-
+1. Clone the repository to your local machine or download the project files as a zip archive.
+2. Extract the files if you downloaded the zip archive.
+3. Open the `home.html` file in your preferred web browser.
+4. Explore the various sections of the website by navigating through the menu or clicking on different links.
+5. Interact with the features provided on each page, such as viewing tables, or clicking on buttons.
+6. Optionally, customize the website's appearance or behavior by modifying the CSS or JavaScript files.
+7. Enjoy exploring the content and functionality of the website!
+   
 ## Contributing
 
-Specify guidelines for contributing to the project, such as how to report bugs, suggest new features, or submit pull requests. Include information about coding standards, code review processes, and contribution workflow.
+Contributions to the project are welcome and encouraged! If you would like to contribute, please follow these guidelines:
 
-## License
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and ensure they adhere to the project's coding standards.
+4. Test your changes thoroughly.
+5. Submit a pull request with a clear description of your changes.
 
-Indicate the project's license and provide a link to the full license text if applicable. Clearly state any usage restrictions or conditions.
-
-## Acknowledgements
-
-Optionally, acknowledge any individuals, organizations, or resources that have contributed to the project or inspired its development.
 
 ## Contact
 
-Provide contact information for project maintainers or contributors, such as email addresses or links to social media profiles.
-
+For any inquiries or feedback, please contact the project maintainer at tiqitaqaltd@gmail.com.
