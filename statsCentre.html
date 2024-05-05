@@ -76,16 +76,15 @@
 <body>
     
     <div id="header">
-        <h1>Stats Centre</h1>
     </div>
     <nav class="navbar">
         <ul class="nav-list">
-          <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
-          <li class="nav-item"><a class="nav-link" href="#all-time-stats" onclick="toggleStats()">All-time Stats</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Records</a></li>
+          <li class="nav-item"><a class="nav-link" href="#dashboard" onclick="toggleSection('dashboard')">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="#all-time-stats" onclick="toggleSection('all-time-stats')">All-time Stats</a></li>
+          <li class="nav-item"><a class="nav-link" href="#records" onclick="toggleSection('records')">Records</a></li>
         </ul>
-      </nav>
-    <div class="container" id="all-time-stats">
+    </nav>
+    <div class="container" id="all-time-stats" style="display: none;">
         <div class="card">
             <h2>Appearances</h2>
             <table id="appearances">
@@ -422,6 +421,189 @@
         </div>
         
     </div>
+    <div class="container" id="records" style="display: none;">
+        <div class="card">
+            <h2>Titles</h2>
+            <table>
+                <tr>
+                    <th>Titles</th>
+                    <th>Most PL title wins</th>
+                    <th>Most consecutive PL title wins</th>
+                    <th>Biggest PL title-winning margin</th>
+                    <th>Smallest PL title-winning margin</th>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Manchester United</td>
+                    <td>3 - Manchester United (1998/99-2000/01 & 2006/07-2008/09)</td>
+                    <td>19 points - Manchester City (2017/18)</td>
+                    <td>0 points, +8 goal difference - Manchester City (2011/12)</td>
+                </tr>
+            </table>
+        </div>
+    
+        <div class="card">
+            <h2>Wins</h2>
+            <table>
+                <tr>
+                    <th>Most wins in a season</th>
+                    <th>Most consecutive wins</th>
+                    <th>Most wins against a single opponent</th>
+                </tr>
+                <tr>
+                    <td>32 - Manchester City (2017/18)</td>
+                    <td>18 - Manchester City (August 26, 2017 - December 27, 2017)</td>
+                    <td>22 - Manchester United against Aston Villa</td>
+                </tr>
+            </table>
+        </div>
+    
+        <div class="card">
+            <h2>Defeats</h2>
+            <table>
+                <tr>
+                    <th>Most defeats in a season</th>
+                    <th>Most consecutive defeats</th>
+                    <th>Most defeats against a single opponent</th>
+                </tr>
+                <tr>
+                    <td>29 - Sunderland (2005/06)</td>
+                    <td>15 - Sunderland (January 21, 2017 - May 6, 2017)</td>
+                    <td>27 - Everton against Arsenal</td>
+                </tr>
+            </table>
+        </div>
+    
+        <div class="card">
+            <h2>Goals</h2>
+            <table>
+                <tr>
+                    <th>Most goals in a season</th>
+                    <th>Most consecutive matches scored in</th>
+                    <th>Most goals by a player in a single match</th>
+                </tr>
+                <tr>
+                    <td>106 - Manchester City (2017/18)</td>
+                    <td>21 - Arsenal (2001/02)</td>
+                    <td>5 - Andy Cole (Manchester United vs. Ipswich Town, March 4, 1995)</td>
+                </tr>
+            </table>
+        </div>
+    
+        <div class="card">
+            <h2>Draws</h2>
+            <table>
+                <tr>
+                    <th>Most draws in a season</th>
+                    <th>Most consecutive draws</th>
+                    <th>Most draws against a single opponent</th>
+                </tr>
+                <tr>
+                    <td>18 - Liverpool (1992/93 & 1996/97)</td>
+                    <td>6 - Leeds United (August 31, 1996 - September 28, 1996)</td>
+                    <td>14 - Manchester United against Chelsea</td>
+                </tr>
+            </table>
+        </div>
+    
+        <div class="card">
+            <h2>Points</h2>
+            <table>
+                <tr>
+                    <th>Most points in a season</th>
+                    <th>Most consecutive seasons with 90+ points</th>
+                    <th>Most points dropped from winning position</th>
+                </tr>
+                <tr>
+                    <td>100 - Manchester City (2017/18)</td>
+                    <td>4 - Manchester City (2017/18 - 2020/21)</td>
+                    <td>23 - Manchester United (2018/19)</td>
+                </tr>
+            </table>
+        </div>
+    
+        <div class="card">
+            <h2>Red Cards</h2>
+            <table>
+                <tr>
+                    <th>Most red cards in a season</th>
+                    <th>Most consecutive matches with a red card</th>
+                    <th>Most red cards by a single player</th>
+                </tr>
+                <tr>
+                    <td>8 - Sunderland (2009/10)</td>
+                    <td>6 - Derby County (February 11, 2008 - March 15, 2008)</td>
+                    <td>5 - Patrick Vieira (Arsenal)</td>
+                </tr>
+            </table>
+        </div>
+    
+        <div class="card">
+            <h2>Assists</h2>
+            <table>
+                <tr>
+                    <th>Most assists in a season</th>
+                    <th>Most consecutive matches with an assist</th>
+                    <th>Most assists by a single player in a single match</th>
+                </tr>
+                <tr>
+                    <td>20 - Kevin De Bruyne (Manchester City, 2019/20)</td>
+                    <td>11 - Thierry Henry (Arsenal, October 24, 2002 - January 1, 2003)</td>
+                    <td>4 - Cesc Fàbregas (Arsenal vs. Blackburn Rovers, October 4, 2009)</td>
+                </tr>
+            </table>
+        </div>
+    
+        <div class="card">
+            <h2>Clean Sheets</h2>
+            <table>
+                <tr>
+                    <th>Most clean sheets in a season</th>
+                    <th>Most consecutive clean sheets</th>
+                    <th>Most clean sheets by a goalkeeper</th>
+                </tr>
+                <tr>
+                    <td>24 - Chelsea (2004/05)</td>
+                    <td>14 - Manchester United (October 26, 2008 - January 31, 2009)</td>
+                    <td>202 - Petr Čech (Chelsea & Arsenal)</td>
+                </tr>
+            </table>
+        </div>
+    
+        <div class="card">
+            <h2>Penalties</h2>
+            <table>
+                <tr>
+                    <th>Most penalties scored in a season</th>
+                    <th>Most consecutive penalties scored</th>
+                    <th>Most penalties saved by a goalkeeper</th>
+                </tr>
+                <tr>
+                    <td>10 - Chelsea (2016/17)</td>
+                    <td>11 - Manchester City (November 18, 2017 - March 1, 2018)</td>
+                    <td>29 - David De Gea (Manchester United)</td>
+                </tr>
+            </table>
+        </div>
+    
+        <div class="card">
+            <h2>Home and Away</h2>
+            <table>
+                <tr>
+                    <th>Most home wins in a season</th>
+                    <th>Most away wins in a season</th>
+                    <th>Most home goals in a season</th>
+                    <th>Most away goals in a season</th>
+                </tr>
+                <tr>
+                    <td>19 - Manchester United (2010/11)</td>
+                    <td>16 - Manchester City (2011/12 & 2017/18)</td>
+                    <td>68 - Manchester City (2011/12)</td>
+                    <td>58 - Manchester City (2017/18)</td>
+                </tr>
+            </table>
+        </div>
+    </div>
     
     <div id="footer">
         &copy; 2024 All-Time Premier League Stats
@@ -440,6 +622,13 @@
                 fetchAllData();
             }
         });
+        // Function to toggle the visibility of sections
+        function toggleSection(sectionId) {
+            // Hide all sections
+            $('.container').hide();
+            // Show the selected section
+            $('#' + sectionId).show();
+        }
     </script>
 </body>
 </html>
