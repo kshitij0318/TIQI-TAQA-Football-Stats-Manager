@@ -1,65 +1,45 @@
-<features>
-    <!-- General Styles -->
-    <feature name="General Styles">
-        <description>
-            This section contains the general styling for the webpage, including font, background color,
-            header styles, navigation links, main content, table styles, button styles, footer styles,
-            and horizontal alignment for section links.
-        </description>
-    </feature>
+# Project Title
 
-    <!-- Table Styles -->
-    <feature name="Table Styles">
-        <description>
-            Defines styles for tables, including resetting default table styles, styling table headers,
-            styling table data cells, and highlighting top positions.
-        </description>
-    </feature>
+Brief description or overview of the project.
 
-    <!-- Button Styles -->
-    <feature name="Button Styles">
-        <description>
-            Specifies styles for buttons, including background color, text color, border, padding,
-            cursor, and border radius.
-        </description>
-    </feature>
+## Table of Contents
 
-    <!-- Footer Styles -->
-    <feature name="Footer Styles">
-        <description>
-            Defines styles for the footer, including background color, text color, alignment, and padding.
-        </description>
-    </feature>
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-    <!-- Horizontal alignment for section links -->
-    <feature name="Horizontal alignment for section links">
-        <description>
-            Styles for aligning section links horizontally, using flexbox to display them in a row
-            and centering them within the navigation.
-        </description>
-    </feature>
+## Introduction
 
-    <!-- Scrollable Team Badges -->
-    <feature name="Scrollable Team Badges">
-        <description>
-            Enables horizontal scrolling effect for displaying team badges, using flexbox and keyframes
-            animation to create a continuous scrolling effect.
-        </description>
-    </feature>
+Provide a more detailed introduction to the project. Explain its purpose, goals, and any relevant background information.
 
-    <!-- FIFA Team Select Overlay -->
-    <feature name="FIFA Team Select Overlay">
-        <description>
-            Allows users to select a FIFA team from a grid of team badges, toggling the selection
-            of a team and displaying its badge prominently.
-        </description>
-    </feature>
+## Features
 
-    <!-- Match Viewer Controls -->
-    <feature name="Match Viewer Controls">
-        <description>
-            Provides controls for a match viewer, including buttons for navigating through match
-            highlights, changing viewing modes, and accessing additional options.
-        </description>
-    </feature>
-</features>
+Outline the key features of the project, along with brief descriptions. You can list them here or refer to separate documentation for more details.
+
+## Installation
+
+Provide step-by-step instructions on how to install and set up the project locally. Include any prerequisites, dependencies, or environment setup required.
+
+## Usage
+
+Explain how to use the project, including any command-line instructions, configuration options, or examples. Provide code snippets or screenshots if necessary.
+
+## Contributing
+
+Specify guidelines for contributing to the project, such as how to report bugs, suggest new features, or submit pull requests. Include information about coding standards, code review processes, and contribution workflow.
+
+## License
+
+Indicate the project's license and provide a link to the full license text if applicable. Clearly state any usage restrictions or conditions.
+
+## Acknowledgements
+
+Optionally, acknowledge any individuals, organizations, or resources that have contributed to the project or inspired its development.
+
+## Contact
+
+Provide contact information for project maintainers or contributors, such as email addresses or links to social media profiles.
+
