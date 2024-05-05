@@ -5,73 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All-Time Premier League Stats</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        h1 {
-            margin: 0;
-            font-size: 36px;
-            text-align: center;
-        }
-        .container {
-            margin: 20px auto;
-            padding: 0 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        .card {
-            width: calc(50% - 20px); /* Adjust the width as needed */
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-            font-size: 16px;
-        }
-        th {
-            background-color: #f2f2f2;
-            color: #333;
-            font-size: 18px;
-            font-weight: bold;
-        }/* Style the navigation bar */
-        .navbar {
-        overflow: hidden;
-        background-color: #333;
-        }
-
-        /* Navigation link styles */
-        .nav-list {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        }
-
-        .nav-item {
-        float: left;
-        }
-
-        .nav-link {
-        display: block;
-        padding: 10px 20px;
-        color: white;
-        text-decoration: none;
-        }
-
-        /* Change background color on hover  */
-        .nav-link:hover {
-        background-color: #777;
-        }
-
-    </style>
+    <link rel="stylesheet" href="CSS\statsCentre.css">
+    
+    
 </head>
 <body>
     
@@ -80,11 +16,827 @@
     <nav class="navbar">
         <ul class="nav-list">
           <li class="nav-item"><a class="nav-link" href="#dashboard" onclick="toggleSection('dashboard')">Dashboard</a></li>
-          <li class="nav-item"><a class="nav-link" href="#all-time-stats" onclick="toggleSection('all-time-stats')">All-time Stats</a></li>
+          <li class="nav-item"><a class="nav-link" href="#all-time-player-stats" onclick="toggleSection('all-time-player-stats')">All-time Player Stats</a></li>
+          <li class="nav-item"><a class="nav-link" href="#all-time-team-stats" onclick="toggleSection('all-time-team-stats')">All-time Team Stats</a></li>
           <li class="nav-item"><a class="nav-link" href="#records" onclick="toggleSection('records')">Records</a></li>
         </ul>
     </nav>
-    <div class="container" id="all-time-stats" style="display: none;">
+    <div class="container" id="dashboard" style="display: none;"> 
+        <div class="card">
+            <h2>Top Goal Scorers</h2>
+            <table>
+                <tr>
+                    <th>Rank</th>
+                    <th>Player</th>
+                    <th>Club</th>
+                    <th>Nationality</th>
+                    <th>Stat</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Erling Haaland</td>
+                    <td>Manchester City</td>
+                    <td>Norway</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Alexander Isak</td>
+                    <td>Newcastle United</td>
+                    <td>Sweden</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Cole Palmer</td>
+                    <td>Chelsea</td>
+                    <td>England</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Ollie Watkins</td>
+                    <td>Aston Villa</td>
+                    <td>England</td>
+                    <td>19</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Dominic Solanke</td>
+                    <td>Bournemouth</td>
+                    <td>England</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>Mohamed Salah</td>
+                    <td>Liverpool</td>
+                    <td>Egypt</td>
+                    <td>17</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>Jarrod Bowen</td>
+                    <td>West Ham United</td>
+                    <td>England</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>Phil Foden</td>
+                    <td>Manchester City</td>
+                    <td>England</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>Bukayo Saka</td>
+                    <td>Arsenal</td>
+                    <td>England</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>Son Heung-Min</td>
+                    <td>Tottenham Hotspur</td>
+                    <td>South Korea</td>
+                    <td>16</td>
+                </tr>
+            </table>
+        </div>
+        <div class="card">
+            <h2>Top Assist Providers</h2>
+            <table>
+                <tr>
+                    <th>Rank</th>
+                    <th>Player</th>
+                    <th>Club</th>
+                    <th>Nationality</th>
+                    <th>Stat</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Ollie Watkins</td>
+                    <td>Aston Villa</td>
+                    <td>England</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Anthony Gordon</td>
+                    <td>Newcastle United</td>
+                    <td>England</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Pascal Groß</td>
+                    <td>Brighton & Hove Albion</td>
+                    <td>Germany</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Kieran Trippier</td>
+                    <td>Newcastle United</td>
+                    <td>England</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Julián Álvarez</td>
+                    <td>Manchester City</td>
+                    <td>Argentina</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Leon Bailey</td>
+                    <td>Aston Villa</td>
+                    <td>Jamaica</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Rodri</td>
+                    <td>Manchester City</td>
+                    <td>Spain</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Pedro Neto</td>
+                    <td>Wolverhampton Wanderers</td>
+                    <td>Portugal</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Cole Palmer</td>
+                    <td>Chelsea</td>
+                    <td>England</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Bukayo Saka</td>
+                    <td>Arsenal</td>
+                    <td>England</td>
+                    <td>9</td>
+                </tr>
+            </table>
+        </div>
+        <div class="card">
+            <h2>Top Passers</h2>
+            <table>
+                <tr>
+                    <th>Rank</th>
+                    <th>Player</th>
+                    <th>Club</th>
+                    <th>Nationality</th>
+                    <th>Stat</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Rodri</td>
+                    <td>Manchester City</td>
+                    <td>Spain</td>
+                    <td>3,306</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Lewis Dunk</td>
+                    <td>Brighton & Hove Albion</td>
+                    <td>England</td>
+                    <td>3,052</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Virgil van Dijk</td>
+                    <td>Liverpool</td>
+                    <td>Netherlands</td>
+                    <td>2,676</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>William Saliba</td>
+                    <td>Arsenal</td>
+                    <td>France</td>
+                    <td>2,662</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Pascal Groß</td>
+                    <td>Brighton & Hove Albion</td>
+                    <td>Germany</td>
+                    <td>2,640</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>Rúben Dias</td>
+                    <td>Manchester City</td>
+                    <td>Portugal</td>
+                    <td>2,399</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>Jan Paul van Hecke</td>
+                    <td>Brighton & Hove Albion</td>
+                    <td>Netherlands</td>
+                    <td>2,399</td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td>Cristian Romero</td>
+                    <td>Tottenham Hotspur</td>
+                    <td>Argentina</td>
+                    <td>2,264</td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td>Axel Disasi</td>
+                    <td>Chelsea</td>
+                    <td>France</td>
+                    <td>2,176</td>
+                </tr>
+                <tr>
+                    <td>10.</td>
+                    <td>Maximilian Kilman</td>
+                    <td>Wolverhampton Wanderers</td>
+                    <td>England</td>
+                    <td>2,171</td>
+                </tr>
+            </table>
+        </div>
+        <div class="card">
+            <h2>Top Goalkeepers - Clean Sheets</h2>
+            <table>
+                <tr>
+                    <th>Rank</th>
+                    <th>Player</th>
+                    <th>Club</th>
+                    <th>Nationality</th>
+                    <th>Stat</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>David Raya</td>
+                    <td>Arsenal</td>
+                    <td>Spain</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Jordan Pickford</td>
+                    <td>Everton</td>
+                    <td>England</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Bernd Leno</td>
+                    <td>Fulham</td>
+                    <td>Germany</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Ederson</td>
+                    <td>Manchester City</td>
+                    <td>Brazil</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Emiliano Martínez</td>
+                    <td>Aston Villa</td>
+                    <td>Argentina</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>André Onana</td>
+                    <td>Manchester United</td>
+                    <td>Cameroon</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>Alisson Becker</td>
+                    <td>Liverpool</td>
+                    <td>Brazil</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>Mark Flekken</td>
+                    <td>Brentford</td>
+                    <td>Netherlands</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>Neto</td>
+                    <td>Bournemouth</td>
+                    <td>Brazil</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>10.</td>
+                    <td>Sam Johnstone</td>
+                    <td>Crystal Palace</td>
+                    <td>England</td>
+                    <td>6</td>
+                </tr>
+            </table>
+        </div>
+        <div class="card" style="height: 8vh; width: 1000vh;">
+            <h1 style="text-align: center;">2023/24 Club Stats</h1>
+        </div>
+        <div class="card">
+            <h2>Goals</h2>
+            <table>
+                <tr>
+                    <th>Rank</th>
+                    <th>Club</th>
+                    <th>Stat</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Arsenal</td>
+                    <td>88</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Manchester City</td>
+                    <td>87</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Newcastle United</td>
+                    <td>78</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Liverpool</td>
+                    <td>77</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Aston Villa</td>
+                    <td>73</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>Tottenham Hotspur</td>
+                    <td>67</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>Chelsea</td>
+                    <td>65</td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td>West Ham United</td>
+                    <td>56</td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td>Bournemouth</td>
+                    <td>52</td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td>Brentford</td>
+                    <td>52</td>
+                </tr>
+            </table>
+        </div>
+        <div class="card">
+            <h2>Tackles</h2>
+            <table>
+                <tr>
+                    <th>Rank</th>
+                    <th>Club</th>
+                    <th>Stat</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Crystal Palace</td>
+                    <td>727</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Everton</td>
+                    <td>700</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Wolverhampton Wanderers</td>
+                    <td>694</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Nottingham Forest</td>
+                    <td>683</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Sheffield United</td>
+                    <td>678</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>Tottenham Hotspur</td>
+                    <td>663</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>Bournemouth</td>
+                    <td>657</td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td>Brentford</td>
+                    <td>646</td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td>West Ham United</td>
+                    <td>637</td>
+                </tr>
+                <tr>
+                    <td>10.</td>
+                    <td>Fulham</td>
+                    <td>636</td>
+                </tr>
+            </table>
+        </div>
+        <div class="card">
+            <h2>Wins</h2>
+            <table>
+                <tr>
+                    <th>Rank</th>
+                    <th>Club</th>
+                    <th>Stat</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Arsenal</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Manchester City</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Liverpool</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Aston Villa</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Tottenham Hotspur</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>Newcastle United</td>
+                    <td>17</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>Manchester United</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td>Chelsea</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td>Bournemouth</td>
+                    <td>13</td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td>West Ham United</td>
+                    <td>13</td>
+                </tr>
+            </table>
+        </div>
+        <div class="card">
+            <h2>Losses</h2>
+            <table>
+                <tr>
+                    <th>Rank</th>
+                    <th>Club</th>
+                    <th>Stat</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Sheffield United</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Burnley</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Luton Town</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Nottingham Forest</td>
+                    <td>19</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Brentford</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>Fulham</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>Wolverhampton Wanderers</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td>Crystal Palace</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td>Everton</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>10.</td>
+                    <td>Bournemouth</td>
+                    <td>14</td>
+                </tr>
+            </table>
+        </div>
+    </div>        
+    <div class="container" id="all-time-team-stats" style="display: none;"> 
+        <div class="card">
+            <h2>Team Wins</h2>
+            <table>
+                <tr>
+                    <th>Rank</th>
+                    <th>Club</th>
+                    <th>Stat</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Manchester United</td>
+                    <td>742</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Arsenal</td>
+                    <td>671</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Liverpool</td>
+                    <td>650</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Chelsea</td>
+                    <td>643</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Tottenham Hotspur</td>
+                    <td>538</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>Manchester City</td>
+                    <td>526</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>Everton</td>
+                    <td>438</td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td>Newcastle United</td>
+                    <td>418</td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td>Aston Villa</td>
+                    <td>392</td>
+                </tr>
+                <tr>
+                    <td>10.</td>
+                    <td>West Ham United</td>
+                    <td>359</td>
+                </tr>
+            </table>
+        </div>
+        <div class="card">
+            <h2>Team Losses</h2>
+            <table>
+                <tr>
+                    <th>Rank</th>
+                    <th>Club</th>
+                    <th>Stat</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Everton</td>
+                    <td>447</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>West Ham United</td>
+                    <td>440</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Aston Villa</td>
+                    <td>409</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Newcastle United</td>
+                    <td>406</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Southampton</td>
+                    <td>396</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>Tottenham Hotspur</td>
+                    <td>393</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>Sunderland</td>
+                    <td>296</td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td>Manchester City</td>
+                    <td>287</td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td>Fulham</td>
+                    <td>286</td>
+                </tr>
+                <tr>
+                    <td>10.</td>
+                    <td>Chelsea</td>
+                    <td>277</td>
+                </tr>
+            </table>
+        </div>
+        <div class="card">
+            <h2>Goals</h2>
+            <table>
+                <tr>
+                    <th>Rank</th>
+                    <th>Club</th>
+                    <th>Stat</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Manchester United</td>
+                    <td>2,295</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Arsenal</td>
+                    <td>2,193</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Liverpool</td>
+                    <td>2,173</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Chelsea</td>
+                    <td>2,076</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Tottenham Hotspur</td>
+                    <td>1,882</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>Manchester City</td>
+                    <td>1,839</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>Everton</td>
+                    <td>1,564</td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td>Newcastle United</td>
+                    <td>1,523</td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td>Aston Villa</td>
+                    <td>1,389</td>
+                </tr>
+                <tr>
+                    <td>10.</td>
+                    <td>West Ham United</td>
+                    <td>1,333</td>
+                </tr>
+            </table>
+        </div>
+        <div class="card">
+            <h2>Goals Conceded</h2>
+            <table>
+                <tr>
+                    <th>Rank</th>
+                    <th>Club</th>
+                    <th>Stat</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Everton</td>
+                    <td>1,587</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Tottenham Hotspur</td>
+                    <td>1,555</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>West Ham United</td>
+                    <td>1,549</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Newcastle United</td>
+                    <td>1,506</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Aston Villa</td>
+                    <td>1,451</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>Southampton</td>
+                    <td>1,355</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>Liverpool</td>
+                    <td>1,232</td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td>Chelsea</td>
+                    <td>1,231</td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td>Arsenal</td>
+                    <td>1,219</td>
+                </tr>
+                <tr>
+                    <td>10.</td>
+                    <td>Manchester United</td>
+                    <td>1,160</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="container" id="all-time-player-stats" style="display: none;">
         <div class="card">
             <h2>Appearances</h2>
             <table id="appearances">
