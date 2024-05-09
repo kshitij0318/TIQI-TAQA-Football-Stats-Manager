@@ -1,6 +1,6 @@
-# Project Title
+# TIQI TAQA - Football Stats Manager
 
-TIQI TAQA - Football Stats Manager
+
 
 ## Table of Contents
 
