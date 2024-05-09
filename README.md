@@ -11,7 +11,8 @@ TIQI TAQA - Football Stats Manager
   
 ## Introduction
 
-This project is a FIFA team selection overlay designed to facilitate the process of selecting teams for FIFA matches. It provides users with an interactive interface to browse and choose from a variety of FIFA teams easily.
+This is a platform for football fans to view statistics and get information of their favourite football team playing in the premier league. 
+
 
 ## Features
 
